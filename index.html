@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo 3D - Sonido y Manos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        #info h3 {
+            margin-top: 0;
+        }
+        #info p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .status {
+            color: #00ff00;
+        }
+        .warning {
+            color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h3>Prototipo 3D Interactivo</h3>
+        <p><strong>Controles:</strong></p>
+        <p>🎤 Nivel de sonido: <span id="soundLevel" class="status">0</span></p>
+        <p>✋ Manos detectadas: <span id="handsDetected" class="status">0</span></p>
+        <p class="warning">Haz clic en la pantalla para iniciar</p>
+        <p style="font-size: 10px; margin-top: 10px;">
+            El sonido controla el tamaño de las esferas.<br>
+            Las manos controlan la posición y rotación.
+        </p>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
